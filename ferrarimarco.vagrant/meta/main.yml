@@ -1,0 +1,17 @@
+---
+dependencies: []
+galaxy_info:
+  author: ferrarimarco
+  description: Ansible role to install Vagrant
+  license: 3-clause BSD license.
+  min_ansible_version: 2.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+  galaxy_tags:
+    - virtualmachine
+    - Vagrant
+    - development
+    - environment

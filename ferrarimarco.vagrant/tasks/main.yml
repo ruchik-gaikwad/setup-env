@@ -1,0 +1,11 @@
+---
+- name: Check whether Vagrant is installed
+  changed_when: no
+  command: "dpkg-query -f '${Status}' -W vagrant"
+  failed_when: no
+  register: check_vagrant
+
+- name: Install Vagrant package
+  apt:
+    deb: "{{ vagrant_download_url }}"
+  when: "'ok installed' not in check_vagrant.stdout"

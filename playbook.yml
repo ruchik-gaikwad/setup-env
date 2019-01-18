@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  become: true
+  roles: 
+  - geerlingguy.nodejs
+  - geerlingguy.docker
+    #  - franklinkim.docker-compose
+  - gantsign.atom
+  - ngetchell.vscode
+  - geerlingguy.git
+  - ferrarimarco.vagrant
+  - mmacia.ohmyzsh
+  - wtanaka.slack
+  vars:
+  - docker_compose_version: 1.21.0 
